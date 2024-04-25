@@ -1,0 +1,21 @@
+@import "../../../scss/base/base.scss";
+
+.img{
+  max-width: 100%;
+  padding: 20px;
+  display: block;
+  margin: auto
+}
+
+.imgBox{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+@include resp-md{
+  .img{
+    max-width: 600px;
+  }
+}

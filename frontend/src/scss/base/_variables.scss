@@ -1,0 +1,29 @@
+/*#region colors*/
+
+$orange-color: #FF652C;
+$cyan-color: #14ACEF;
+$orange-gradient: linear-gradient(90deg, rgba(255,69,0,1) 0%, rgba(255,101,44,1) 100%);
+$blue-violet-gradient: linear-gradient(90deg, rgba(0,0,255,0.9) 0%, rgba(255,0,255,0.9) 100%);
+$black-color: #000000;
+$grey-color: #686868;
+$light-grey: #D7D7D7;
+$bg-color: #F8F8F8;
+$bg-ui-color: #F8F9FA;
+$error-color: #ff3333;
+$muted-color : #71838b;
+
+
+/*#endregion colors*/
+
+/*#region font*/
+
+$main-font: 'Roboto', Arial, sans-serif;
+
+/*#endregion font*/
+
+
+/* Default spacing value for all margins and paddings (use function base-gutter()) */
+$default-spacing: 4px;
+
+/* Default border-radius */
+$default-radius: 4px;

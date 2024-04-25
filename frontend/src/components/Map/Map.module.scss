@@ -1,0 +1,45 @@
+@import '../../scss/base/base';
+
+.info-window {
+  width: 255px;
+  border-radius: 4px;
+
+  p {
+    margin-bottom: base-gutter(2);
+  }
+
+  &__block {
+    padding: base-gutter(2) base-gutter(1) 0;
+  }
+
+  &__avatar {
+    height: 64px;
+    margin: 0 base-gutter(2) base-gutter(2) 0;
+    float: left;
+
+    img {
+      height: 100%;
+      border-radius: 7px;
+    }
+  }
+
+  &__details {
+    color: $orange-color;
+    font-weight: 400;
+  }
+
+  &__location {
+    font-size: 10px;
+  }
+
+  &__period {
+    position: absolute;
+    bottom: base-gutter(1);
+    right: base-gutter(2);
+    font-size: 10px;
+  }
+
+  &__agree{
+    text-align: center;
+  }
+}

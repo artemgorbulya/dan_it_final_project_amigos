@@ -1,0 +1,21 @@
+@import "../../scss/base/base.scss";
+
+.photoEditor{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 530px;
+}
+
+@include resp-sm{
+  .photoEditor{
+    justify-content: flex-start;
+  }
+
+
+}
+
+
+@include resp-md{
+
+}

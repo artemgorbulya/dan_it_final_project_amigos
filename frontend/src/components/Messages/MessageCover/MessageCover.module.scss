@@ -1,0 +1,108 @@
+@import "../../../scss/base/base.scss";
+
+.wrapper {
+	padding: base-gutter(5) base-gutter(2);
+	border-bottom: 1px solid $light-grey;
+	display: block;
+	text-decoration: none;
+
+	&:hover {
+		background: $bg-ui-color;
+		border-bottom: 1px solid transparent;
+		@include shadow;
+	}
+}
+
+.dropdown{
+	@include flex(flex-start);
+}
+
+.content {
+	@include flex(space-between);
+	position: relative;
+}
+
+.userBlock {
+	@include flex(flex-start, flex-start);
+}
+
+.userAvatar {
+	width: 64px;
+	height: 64px;
+	border-radius: 32px;
+	background-size: cover;
+	background-position: center;
+	margin-right: base-gutter(4);
+}
+
+.userName,
+.userNameUnread {
+	font-size: 18px;
+	position: relative;
+	color: $black-color;
+	text-decoration: none;
+
+}
+
+.userNameUnread {
+	font-weight: bold;
+}
+
+.message,
+.boldMessage {
+	display: block;
+	margin-top: base-gutter(1);
+	font-size: 14px;
+	text-decoration: none;
+	margin-bottom: 0;
+	color: $grey-color;
+}
+
+.boldMessage {
+	font-weight: 500;
+	color: black;
+}
+
+.circle {
+	width: 8px;
+	height: 8px;
+	background: $orange-color;
+	border-radius: 4px;
+	position: absolute;
+	top: 0;
+	right: -10px;
+}
+
+.photo {
+	height: 100%;
+}
+
+.infoBlock {
+	@include flex(flex-start);
+	flex-direction: column;
+	// padding-top: base-gutter(8);
+}
+
+.dateInfo {
+	color: $muted-color;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	// margin-top: base-gutter(6.5);
+	margin-bottom: 0;
+}
+
+@include resp-md {
+	.userName {
+		font-size: 18px;
+	}
+	.message,
+	.boldMessage {
+		font-size: 16px;
+		margin-top: base-gutter(3);
+	}
+
+	.dateInfo {
+		bottom: base-gutter(2);
+	}
+}

@@ -1,0 +1,45 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/functions";
+@import "../../scss/base/mixins";
+
+.aboutWrapper{
+  padding: 10px 15px;
+  @include resp-sm {
+    padding: 15px 20px;
+  }
+  @include resp-md {
+    padding: 30px 35px;
+  }
+}
+
+.title, .langTitle{
+  font-size: 11px;
+  color: #686868;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.langTitle{
+  margin-top: 20px;
+}
+
+.text{
+  font-size: 18px;
+  line-height: 1.39;
+  color: #333333;
+}
+
+.languageWrapper{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+//.language{
+//  border-radius: 15px;
+//  background-color: #cbefff;
+//  padding: 5px 14px 6px;
+//  margin-right: 5px;
+//  margin-bottom: 5px;
+//  color: #14acef;
+//}

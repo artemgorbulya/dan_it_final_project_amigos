@@ -1,0 +1,35 @@
+@import "../../scss/base/base.scss";
+
+.selectStyle {
+  line-height: 40px;
+  background-color:transparent;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  appearance: none;  /*Убираем стрелку*/
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+
+
+option:hover {
+  background-color:yellow;
+}
+
+option:hover{
+
+}
+
+.mat-list-base .mat-list-option {
+  background-color: red;
+}
+
+.selectOption{
+
+}
+.box{
+  position: relative;
+
+}

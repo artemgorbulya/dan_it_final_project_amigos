@@ -1,0 +1,63 @@
+@import "../../scss/base/base.scss";
+
+.wrapper{
+	@include flex(space-between);
+	min-height: 50px;
+	flex-direction: column;
+	padding: base-gutter(2) base-gutter(5);
+	background-color: $bg-color;
+}
+
+.title{
+	font-family: $main-font;
+	font-size: 16px;
+	color: $grey-color;
+	// margin-right: base-gutter(4);
+	margin: 0 base-gutter(4) base-gutter(2) 0;
+}
+
+.filterData {
+	@include flex(flex-start, flex-start);
+	width: 100%;
+	flex-direction: column;
+	margin: base-gutter(1) 0;
+}
+
+.filters {
+	width: 100%;
+}
+
+.icons{
+	font-size: 16px;
+	color: $grey-color;
+	margin-right: $default-spacing;
+}
+
+.equalizer{
+	font-size: 18px;
+	color: $black-color;
+	cursor: pointer;
+}
+
+.controls {
+	@include flex();
+}
+
+.notChosen {
+	color: $grey-color;
+}
+
+@include resp-md {
+	.wrapper {
+		flex-direction: row;
+	}
+	
+	.filterData {
+		flex-direction: row;
+		margin: auto base-gutter(3) auto 0;
+	}
+
+	.title {
+		margin: 0 base-gutter(4) 0 0;
+	}
+}

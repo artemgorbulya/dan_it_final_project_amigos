@@ -1,0 +1,108 @@
+@import "../../scss/base/base.scss";
+
+.createProfile {
+  width: 100%;
+  margin: 0 auto 20px;
+  box-sizing: border-box;
+
+  & button{
+      width: 100%;
+      background-color: #FF652C ;
+      border: 1px solid #FF652C;
+      border-radius: 6px;
+      outline:none;
+      color: white;
+      font-weight: bold;
+      margin: 10px 0;
+      padding: 15px 0;
+      overflow:hidden;
+      cursor: pointer;
+  }
+}
+
+
+.header_text{
+  padding: 15px 10px 15px 20px;
+  font-size: 15px;
+  top: 66px;
+  z-index: 500;
+  background-color: white;
+  position: fixed;
+  width:100%;
+  @include shadow();
+
+}
+
+.content{
+  padding: 60px 10px 10px;
+  margin: 100px auto 30px ;
+}
+
+.formStyle_label{
+  font-size: 11px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.containerForm{
+  //max-width: 348px;
+  max-width: 530px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: white;
+  padding: 30px 10%;
+  @include shadow();
+  border-radius: $default-radius;
+
+}
+
+.separator {
+  width: 1px;
+  background: $light-grey;
+  height: 100%;
+}
+
+
+.infoWrapperReversed {
+  .titleText {
+    margin-left: 0;
+  }
+}
+
+//min-width = 536px
+@include resp-sm{
+  .createProfile{
+
+  }
+
+
+}
+
+
+//min-width=768px
+@include resp-md{
+  .createProfile{
+    border-radius: 10px;
+    background-color: white;
+    max-width: 530px;;
+    @include shadow();
+  }
+
+  .containerForm{
+    margin: 0 auto;
+    background-color: transparent;
+    box-shadow: none;
+    width: 90%;
+    padding: 0 10%;
+  }
+  .content{
+    padding: 10px;
+    margin: 0 auto;
+  }
+  .header_text{
+    margin: 0;
+    position: static;
+    box-shadow: none;
+  }
+}
+

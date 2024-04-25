@@ -1,0 +1,13 @@
+@import "../../scss/base/functions";
+
+
+.selectMulti__label{
+  font-size: 11px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.box{
+  width: 100%;
+  position: relative;
+  margin-bottom: base-gutter(4);
+}

@@ -1,0 +1,30 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $bg-color;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 base-gutter(4);
+
+  @include resp-sm {
+    padding: 0;
+    width: 504px;
+  }
+
+  @include resp-md {
+    width: 734px;
+  }
+
+  @include resp-lg {
+    width: 944px;
+  }
+
+  @include resp-xl {
+    width: 1076px;
+  }
+}

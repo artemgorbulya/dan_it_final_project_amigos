@@ -1,0 +1,166 @@
+@import '../../../../scss/base/base';
+
+.subtitle {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.categories {
+  position: relative;
+  @include flex();
+  flex-direction: column;
+
+  .category {
+    margin-bottom: 4px;
+    @include flex(space-between, flex-end);
+    width: 100%;
+    max-width: 312px;
+    height: 144px;
+    background-size: 312px auto;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    padding: 0 10px 10px;
+    border-radius: $default-radius * 2;
+    z-index: 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    div:first-child {
+      @include flex(center, flex-start);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 40%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+      border-radius: $default-radius * 2;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.85));
+    }
+
+    .checkMark {
+      margin-right: 10px;
+      min-width: 26px;
+      height: 26px;
+      font-size: 11px;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      background: $orange-gradient;
+      text-align: center;
+      line-height: 23px;
+    }
+
+    .categoryTitle {
+      font-size: 20px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .whiteCircle {
+      width: 36px;
+      height: 36px;
+      padding: 9px;
+      border-radius: 50%;
+      background-color: #ffffff;
+
+      img {
+        display: block;
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+
+  .error {
+    position: absolute;
+    bottom: -20px;
+    color: $error-color;
+    font-size: 11px;
+  }
+}
+
+@include resp-sm {
+  .categories {
+    .category {
+      max-width: none;
+      width: 433px;
+      height: 200px;
+      background-size: 433px auto;
+      padding: 0 20px 20px;
+    }
+  }
+}
+
+@include resp-md {
+  .categories {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .category {
+      width: 330px;
+      height: 182px;
+      background-size: 330px auto;
+
+      &:nth-child(odd) {
+        margin-right: 4px;
+      }
+
+      &:nth-of-type(13) {
+        margin-bottom: 0;
+      }
+
+      .whiteCircle {
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+
+        img {
+          width: 23px;
+          height: 23px;
+        }
+      }
+    }
+
+    .error {
+      left: 10px;
+    }
+  }
+}
+
+@include resp-lg {
+  .categories {
+    .category {
+      width: 315px;
+      height: 174px;
+      background-size: 315px auto;
+
+      .whiteCircle {
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+
+        img {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+  }
+}
+
+@include resp-xl {
+  .categories {
+    .category {
+      width: 365px;
+      height: 201.3px;
+      background-size: 365px auto;
+    }
+  }
+}

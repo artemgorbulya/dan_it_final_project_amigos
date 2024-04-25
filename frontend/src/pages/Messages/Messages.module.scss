@@ -1,0 +1,11 @@
+@import "../../scss/base/base.scss";
+
+.wrapper {
+	margin-top: 80px;
+}
+
+@include resp-md {
+	.wrapper {
+		margin-top: 0;
+	}
+}

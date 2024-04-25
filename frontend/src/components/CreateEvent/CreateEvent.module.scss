@@ -1,0 +1,118 @@
+@import '../../scss/base/base';
+
+.contentWrap {
+  &-0,
+  &-1,
+  &-2,
+  &-3,
+  &-4 {
+    padding: 0 base-gutter(3.75);
+  }
+}
+
+.contentWrap-3,
+.contentWrap-4 {
+  text-align: center;
+}
+
+.controlsWrap {
+  margin-top: 31px;
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    flex-basis: 50%;
+
+    &[class*="btn--primary"],
+    &[class*="btn--disabled"] {
+      border-radius: 0 0 $default-radius 0;
+    }
+
+    &[class*="btn--stroke-grey"] {
+      border-radius: 0 0 0 $default-radius;
+    }
+  }
+}
+
+.contentWrap-4 + .controlsWrap > button {
+  margin-top: 40px;
+  flex-basis: 100%;
+}
+
+@include resp-sm {
+  .mainWrap {
+    &-0,
+    &-1,
+    &-2,
+    &-3,
+    &-4 {
+      padding: 0 base-gutter(8.75) base-gutter(8.75);
+    }
+  }
+
+  .contentWrap {
+    &-0,
+    &-1,
+    &-2,
+    &-3 {
+      padding: 0;
+    }
+  }
+
+  .controlsWrap {
+    button {
+      &[class*="btn--primary"],
+      &[class*="btn--disabled"] {
+        border-top-right-radius: $default-radius;
+      }
+
+      &[class*="btn--stroke-grey"] {
+        border-top-left-radius: $default-radius;
+      }
+    }
+  }
+
+  .contentWrap-4 + .controlsWrap > button {
+    margin: 0 auto;
+    flex-basis: auto;
+    border-radius: $default-radius;
+  }
+}
+
+@include resp-md {
+  .mainWrap {
+    &-1,
+    &-2 {
+      padding: 0 base-gutter(35.5) 35px;
+    }
+    &-3 {
+      padding: 0 base-gutter(37.5) 35px;
+    }
+  }
+}
+
+@include resp-lg {
+  .mainWrap {
+    &-1,
+    &-3 {
+      padding: 0 base-gutter(31.75) 35px;
+    }
+
+    &-2 {
+      padding: 0 base-gutter(34) 35px;
+    }
+  }
+}
+
+@include resp-xl {
+  .mainWrap {
+    &-1,
+    &-3 {
+      padding: 0 base-gutter(44) 35px;
+    }
+
+    &-2 {
+      padding: 0 base-gutter(46.25) 35px;
+    }
+  }
+}

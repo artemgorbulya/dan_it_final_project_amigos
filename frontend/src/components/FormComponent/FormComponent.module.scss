@@ -1,0 +1,7 @@
+@import "../../scss/base/base.scss";
+
+.formStyle{
+  @include flex(center, flex-start);
+  flex-direction: column;
+  margin: 0 auto;
+}

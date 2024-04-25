@@ -1,0 +1,41 @@
+@import '../../../../scss/base/base';
+@import '../../../../scss/components/components';
+
+.subtitle {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.place {
+  margin-bottom: 15px;
+
+  label {
+    position: relative;
+
+    i {
+      position: absolute;
+      bottom: 15px;
+      right: 14px;
+      font-size: 15px;
+      color: $orange-color;
+    }
+  }
+
+  button {
+    margin-right: 5px;
+    padding: 0 15px;
+    text-transform: none;
+    min-height: 35px;
+
+    i {
+      font-size: unset !important;
+      margin-right: 8px;
+    }
+  }
+}
+
+.place__map {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 18px;
+}

@@ -1,0 +1,42 @@
+.react-slideshow-container+ul.indicators {
+    margin: -23px 0 0 0;
+    padding: 0;
+    z-index: 100;
+}
+.react-slideshow-container+ul.indicators li {
+    display: inline-block;
+    position: relative;
+    width: 7px;
+    height: 7px;
+    margin-right: 13px;
+    padding: 0;
+    z-index: 2;
+}
+
+.react-slideshow-container+ul.indicators li.active::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #FF652C;
+}
+
+.react-slideshow-container+ul.indicators li:last-child {
+    margin-right: 0;
+}
+
+.react-slideshow-container .nav{
+    position: absolute;
+}
+
+.react-slideshow-container .nav:first-child {
+    left: 3%;
+}
+
+.react-slideshow-container .nav:last-child {
+    right: 3%;
+}

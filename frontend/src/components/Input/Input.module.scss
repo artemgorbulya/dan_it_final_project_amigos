@@ -1,0 +1,33 @@
+@import "../../scss/base/base.scss";
+
+.input{
+    width: 100%;
+    /*height: 46px;*/
+    line-height: 46px;
+    background-color: #F8F9FA;
+    /*border-color: #F8F9FA;*/
+    border: 2px solid #F8F9FA;
+    border-radius: 6px;
+    outline:none;
+    margin: 10px 0;
+    padding: 0 10px;
+    //flex-basis: 348px;
+
+}
+.input:focus{
+    outline:none;
+    @include shadow();
+}
+
+.input__label{
+    font-size: 11px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+}

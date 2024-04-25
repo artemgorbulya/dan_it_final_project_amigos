@@ -1,0 +1,25 @@
+@import "../../../scss/base/base.scss";
+
+
+.headerBox{
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+
+  border-bottom: 1px solid $light-grey;
+  font-size: 14px;
+}
+
+.itemHeaderMenu{
+  width: calc(100%/3);
+  text-align: center;
+  text-decoration: none;
+  //border: 2px solid red;
+  color: black;
+  padding: 10px;
+}
+
+.activeItem{
+  color: $orange-color;
+  border-bottom: 2px solid $orange-color;
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+html, body{
+  font: 14px/1.388 $main-font, Arial, sans-serif;
+  color: $black-color;
+}
+
+h1, .h1 {
+  font-size: 1.714em;
+  margin: .5em 0 1em;
+}
+h2, .h2 {
+  font-size: 1.428rem;
+  margin: .5em 0 1em;
+}
+h3, .h3 {
+  font-size: 1.285rem;
+  margin: .5em 0 1em;
+}
+h4, .h4 {
+  font-size: 1rem;
+  margin: 0 0 .25em;
+}
+
+a{
+  color: $cyan-color;
+  text-decoration: underline;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+p, pre, table, blockquote {
+  margin: 0 0 1.388rem;
+}
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+ul:not([class]):not([id]){
+  list-style: none;
+  margin: 0 0 1.388rem;
+  padding: 0;
+
+  ul {
+    margin: .5rem 0;
+  }
+
+  li{
+    padding: 0 0 0 1.25em;
+    margin: 0 0 .3em;
+    position: relative;
+
+    &::before{
+      content: "\2022";
+      color: $orange-color;
+      font-weight: bold;
+      display: inline-block;
+      width: .75em;
+      margin-left: -.5em;
+      font-size: 1.5em;
+      line-height: 1;
+      vertical-align: bottom;
+    }
+  }
+}

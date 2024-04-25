@@ -1,0 +1,32 @@
+@import '../../scss/base/base';
+
+.loaderWrap {
+  @include flex();
+  width: 100%;
+  padding: base-gutter(4);
+
+  .point {
+    display: inline-block;
+    background-color: $orange-color;
+    width: 12px;
+    height: 12px;
+    margin: 2px;
+    border-radius: 100%;
+    animation: point 0.7s linear 0s infinite normal both running;
+  }
+
+  .active {
+    animation: point 0.7s linear 0.35s infinite normal both running;
+  }
+}
+
+@keyframes point {
+  50% {
+    transform: scale(0.75);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

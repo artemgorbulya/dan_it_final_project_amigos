@@ -1,0 +1,51 @@
+@import "../../scss/base/base.scss";
+
+.formRadioBtn {
+    display: flex;
+    margin: 10px 0 10px 0;
+    width: 100%;
+ }
+.formRadioBtn+.formRadioBtn{
+    margin-left: 10px;   // расстояние между кнопками
+}
+
+.formRadioBtn input[type=radio] {
+    display: none;
+}
+
+.formRadioBtn label {
+    width: 100%;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid #FF652C;
+    border-radius: 6px;
+    user-select: none;
+    fill: #FF652C;
+    display: flex;
+    /*justify-content: space-around;*/
+    align-items: center;
+}
+
+
+/* Checked */
+.formRadioBtn input[type=radio]:checked + label {
+    background: #FF652C;
+    fill:#FFFFFF;
+    color: #FFFFFF;
+    @include shadow();
+}
+
+/* Hover */
+.formRadioBtn label:hover {
+    fill: #FF652C;
+}
+
+/* Disabled */
+.formRadioBtn input[type=radio]:disabled + label {
+    background: #efefef;
+    color: #666;
+}
+
+.radio_btn__text{
+    margin: 0 15%;
+}

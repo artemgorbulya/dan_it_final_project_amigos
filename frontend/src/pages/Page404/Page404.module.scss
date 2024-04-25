@@ -1,0 +1,32 @@
+@import "../../scss/base/base.scss";
+  .page404{
+    border-radius: 10px;
+    background-color: white;
+    max-width: 530px;;
+    margin: 80px auto;
+    padding: 20px 20px;
+    @include shadow();
+  }
+
+.img{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+}
+.oops{
+  display: block;
+  margin: 0 50%;
+  width: 50%;
+}
+
+@include resp-md{
+  .page404{
+    border-radius: 10px;
+    background-color: white;
+    //max-width: 530px;;
+    padding: 10px;
+    margin: 20px auto;
+    @include shadow();
+  }
+}

@@ -1,0 +1,359 @@
+@import "../../scss/base/base.scss";
+
+.btn {
+  text-transform: uppercase;
+  font-weight: 500;
+  @include flex();
+  font-size: .928rem;
+  line-height: 1;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  text-decoration: none;
+  padding: 5px 34px;
+  min-height: 46px;
+
+  @include resp-sm {
+    min-height: 52px;
+  }
+
+
+  &--modal {
+    width: 50%;
+    border-radius: 0;
+  }
+
+  &--primary {
+    color: #fff;
+    background: $orange-color;
+    background: $orange-gradient;
+    transition: box-shadow ease .3s;
+
+    &:hover {
+      box-shadow: 0 0 0 5px rgba(255, 101, 44, .3);
+    }
+  }
+
+  &--blue-violet{
+    color: #fff;
+    background: $blue-violet-gradient;
+  }
+
+   &--chat{
+    width: 100%;
+  }
+
+  &--stroke-grey {
+    color: #5A6F78;
+    background: transparent;
+    box-shadow: inset 0 0 0 1px #F3F5F5;
+    transition: box-shadow ease .3s;
+
+    &:hover {
+      box-shadow: inset 0 0 0 1px $orange-color;
+    }
+  }
+
+  &--light-grey{
+      color: #5A6F78;
+      background: #F3F5F5;
+  }
+
+  &--stroke-orange {
+    color: #000;
+    background: transparent;
+    box-shadow: inset 0 0 0 1px $orange-color;
+    transition: box-shadow ease .3s;
+
+    &:hover {
+      box-shadow: inset 0 0 0 1px $orange-color,
+      0 0 0 5px rgba(255, 101, 44, .3);
+    }
+  }
+
+  &--landing {
+    background-color: rgba(215, 215, 215, .2);
+  }
+
+  &--disabled,
+  &:disabled {
+    color: #5A6F78;
+    background: #F3F5F5;
+    cursor: default;
+  }
+
+  &--agree{
+    background-color: $cyan-color;
+    color: #ffffff;
+  }
+
+  &--event {
+    width: 90%;
+  }
+
+
+  [class^="icon--"] {
+      font-size: 20px;
+    }
+
+    &--header {
+      width: 126px;
+    }
+
+    &--header-mobile {
+      color: white;
+      @include resp-md {
+        color: $black-color;
+      }
+    }
+
+   &--without-padding{
+     padding: 0;
+   }
+}
+
+.form_button_submit {
+  width: 50%;
+  background: $orange-gradient;
+  border: none;
+  outline:none;
+  color: white;
+  font-weight: bold;
+  min-height: 52px;
+  cursor: pointer;
+}
+.form_width50 {
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  
+  &--left {
+    border-bottom-left-radius: 4px;
+    left: 0;
+  }
+  
+  &--right {
+    border-bottom-right-radius: 4px;
+    right: 0;
+  }
+}
+.form_submit_width100 {
+  width: 100%;
+}
+
+@include resp-sm {
+  .form_width50 {
+    position: static;
+
+    &--left {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    &--right {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  }
+}
+
+.close-button {
+  width: 50%;
+  background-color: $bg-ui-color ;
+  color: $muted-color;
+  border: none;
+  border-radius: 6px;
+  outline:none;
+  font-weight: bold;
+  min-height: 52px;
+  cursor: pointer;
+}
+
+.buttonDownloadGrey{
+  width: 50%;
+  background-color: $light-grey;
+  border: 1px solid $light-grey;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  outline:none;
+  color: black;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 15px 0;
+  overflow:hidden;
+  cursor: pointer;
+  min-height: 52px;
+
+}
+.buttonDownloadWhite{
+  width: 100%;
+  background-color: white;
+  border: 1px solid $light-grey;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  outline:none;
+  color: black;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 15px 0;
+  overflow:hidden;
+  cursor: pointer;
+  min-height: 52px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 26px;
+  height: 26px;
+  @include flex();
+  font-size: 12px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #a2a2a2;
+  box-sizing: border-box;
+}
+
+.joinBtn {
+  background: linear-gradient(to bottom, rgba(109, 110, 113, 1), rgba(0, 0, 0, 1));
+  padding: 0 40px;
+  border: none;
+  min-height: 36px;
+  font-size: 18px;
+  border-radius: 17px;
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+}
+
+.scrollTop {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  min-height: unset;
+  right: 20px;
+  bottom: 84px;
+  padding: 0;
+  background-color: $cyan-color;
+  color: #ffffff;
+  opacity: 0.6;
+  z-index: 1500;
+  animation: fadeIn 0.6s;
+  transition: opacity 0.4s;
+
+  i {
+    font-size: 14px !important;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @include resp-sm {
+    bottom: 105px;
+  }
+
+  @include resp-lg {
+    width: 35px;
+    height: 35px;
+    right: 40px;
+    bottom: 45px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.category-btn {
+	@include flex(flex-start);
+  background: transparent;
+	padding: 8px 16px;
+	border-radius: 18px;
+	border: solid 1px #a2a2a2;
+	color: $grey-color;
+	font-size: 14px;
+	line-height: 1.36;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--selected {
+    background: $orange-color;
+    color: white
+  }
+}
+
+.message-btn {
+  @include flex();
+  position: absolute;
+  background: none;
+  border: none;
+  height: 46px;
+  width: 46px;
+  border-radius: 26px;
+  right: 10px;
+  bottom: 0;
+  transition: 0.1s ease;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background-color: white;
+
+    & svg {
+      fill: $orange-color;
+    }
+  }
+}
+
+@include resp-sm {
+  .message-btn {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.goback-msg-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.filter-clear-btn {
+  @include resetBtn();
+  font-size: 14px;
+  border: 1px solid $light-grey;
+  padding: 0 base-gutter(4);
+  border-radius: 20px;
+  margin-right: base-gutter(4);
+  height: 40px;
+  transition: 0.1s ease-in;
+  min-width: 160px;
+
+  &:hover {
+    background: $light-grey;
+  }
+}
+
+.info-window__btn {
+  padding: base-gutter(1) base-gutter(2);
+  font-size: 12px;
+  text-align: center;
+  background-color: $orange-color;
+  border-radius: $default-radius;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

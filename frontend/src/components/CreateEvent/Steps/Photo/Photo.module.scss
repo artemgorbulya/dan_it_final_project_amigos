@@ -1,0 +1,126 @@
+@import '../../../../scss/base/base';
+@import '../../../../scss/components/components';
+
+$fontIcon: 46px;
+
+.subtitle {
+  font-weight: 500;
+}
+
+.addPhoto {
+  label {
+    position: relative;
+    margin: 0 auto;
+    width: 188px;
+    height: 46px;
+    @include flex();
+    font-size: .928rem;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    background: $orange-gradient;
+    transition: box-shadow ease .3s;
+    cursor: pointer;
+
+    .error {
+      position: absolute;
+      bottom: -15px;
+      color: $error-color;
+      font-size: 11px;
+      text-transform: none;
+      font-weight: 400;
+    }
+  }
+
+  .wrap {
+    position: relative;
+    margin: 0 auto 20px;
+    width: 91px;
+    height: 91px;
+
+    .loadedImage {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: $default-radius;
+    }
+
+    .block {
+      width: 100%;
+      height: 100%;
+      border-radius: $default-radius;
+      background-color: #F8F9FA;
+
+      &::before {
+        position: absolute;
+        top: calc(50% - #{$fontIcon} / 2);
+        left: calc(50% - #{$fontIcon} / 2);
+        font-size: $fontIcon;
+        color: #a2a2a2;
+      }
+    }
+  }
+
+
+  //.separator {
+  //  position: relative;
+  //  margin: 18px 0;
+  //  font-size: 14px;
+  //  color: #919191;
+  //
+  //  &::before,
+  //  &::after {
+  //    content: '';
+  //    position: absolute;
+  //    top: 50%;
+  //    width: 45%;
+  //    border-bottom: 1px dotted #d0d7da;
+  //  }
+  //
+  //  &::before {
+  //    left: 0;
+  //  }
+  //
+  //  &::after {
+  //    right: 0;
+  //  }
+  //}
+  //
+  //p {
+  //  margin-bottom: 17px;
+  //  font-size: 14px;
+  //  color: #333333;
+  //}
+  //
+  //.photoGallery {
+  //  margin: 0 auto;
+  //  max-width: 295px;
+  //  display: grid;
+  //  grid-template-columns: repeat(3, 97px);
+  //  grid-gap: 2px;
+  //
+  //  .photo {
+  //    //width: 97px;
+  //    height: 97px;
+  //    background-size: 97px auto;
+  //    background-repeat: no-repeat;
+  //  }
+  //
+  //}
+}
+
+@include resp-sm {
+  .addPhoto {
+    label {
+      height: 52px;
+    }
+
+    .wrap {
+      width: 131px;
+      height: 131px;
+    }
+  }
+}
+

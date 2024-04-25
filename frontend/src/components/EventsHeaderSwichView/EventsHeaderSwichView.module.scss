@@ -1,0 +1,44 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/functions";
+@import "../../scss/base/mixins";
+
+.wrapper{
+	@include flex(space-between);
+
+}
+
+.viewButtonEvents{
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	color: #3b3b3b;
+	background-color: $bg-color;
+	border-radius: $default-radius 0 0 $default-radius;
+}
+
+.viewButtonMap{
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	color: #3b3b3b;
+	background-color: $bg-color;
+	border-radius: 0 $default-radius $default-radius 0;
+}
+
+.viewButtonEventsReversed{
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	color: #ffffff;
+	background: $orange-gradient;
+}
+
+.viewButtonMapReversed{
+	padding: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	color: #ffffff;
+	background: $orange-gradient;
+}
+
+

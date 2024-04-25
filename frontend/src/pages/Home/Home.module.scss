@@ -1,0 +1,177 @@
+@import "../../scss/base/base.scss";
+
+.bg {
+	background-color: $bg-color;
+	min-height: 100vh;
+}
+
+.mainMenu {
+	@include flex(space-around);
+	@include shadow();
+	padding: base-gutter(2) 0;
+	position: fixed;
+	z-index: 500;
+	left: 0;
+	bottom: 0;
+	background: white;
+	width: 100%;
+
+	&__link {
+		position: relative;
+		&:nth-child(5) {
+			order: 3
+		}
+		&:nth-child(3) {
+			order: 4
+		}
+		&:nth-child(4) {
+			order: 5
+		}
+	}
+
+	&__icon {
+		font-size: 36px;
+		color: $black-color;
+		padding: base-gutter(1);
+	}
+
+	&__info {
+		display: none;
+	}
+
+	&__addEventIconBg {
+		width: 64px;
+		height: 64px;
+		background: $orange-gradient;
+		border-radius: 50%;
+		@include flex();
+
+		i {
+			color: white;
+			font-size: 36px;
+		}
+	}
+
+	&__selected {
+		.mainMenu__icon {
+			color: $orange-color;
+		}
+	}
+}
+
+.pageRoutes {
+	border-radius: $default-radius;
+	overflow: hidden;
+	background: white;
+	@include shadow();
+	margin-bottom: base-gutter(24.5);
+}
+
+
+.orangeMark {
+	width: 8px;
+	height: 8px;
+	background: $orange-color;
+	border-radius: 4px;
+	top: 8px;
+	left: 30px;
+	position: absolute;
+}
+
+@include resp-sm {
+	.mainMenu {
+		justify-content: space-evenly;
+		&__icon {
+			font-size: 46px;
+		}
+
+		&__addEventIconBg {
+			width: 82px;
+			height: 82px;
+
+			i {
+				color: white;
+				font-size: 46px;
+			}
+		}
+
+		&__selected {
+			.mainMenu__icon {
+				font-size: 46px;
+			}
+		}
+	}
+
+	.orangeMark {
+		top: 10px;
+		left: 38px;
+	}
+}
+
+@include resp-lg {
+
+	.homeLayout {
+		display: grid;
+		grid-template-columns: 5fr 16fr;
+		column-gap: base-gutter(4);
+	}
+
+	.mainMenu {
+		max-height: 280px;
+		display: block;
+		position: sticky;
+		top: 20px;
+		@include shadow();
+		padding: base-gutter(5) 0;
+		border-radius: $default-radius * 2;
+
+		&__link {
+			@include flex(flex-start);
+			padding-left: base-gutter(6);
+			height: 48px;
+			text-decoration: none;
+			border-left: 3px solid transparent;
+		}
+
+		&__info {
+			display: inline;
+			color: black;
+			margin-left: base-gutter(4);
+		}
+
+		&__icon {
+			font-size: 30px;
+		}
+
+		&__addEventIconBg {
+			width: 38px;
+			height: 38px;
+
+			i {
+				color: white;
+				font-size: 30px;
+			}
+		}
+
+		&__selected {
+			border-left: 3px solid $orange-color;
+			background: rgba($color: $orange-color, $alpha: 0.04);
+
+			.mainMenu__icon {
+				font-size: 30px;
+			}
+
+			.mainMenu__info {
+				color: $orange-color;
+			}
+		}
+	}
+
+	.pageRoutes {
+		border-radius: $default-radius * 2;
+	}
+
+	.orangeMark {
+		left: 50px;
+	}
+}

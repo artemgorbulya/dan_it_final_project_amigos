@@ -1,0 +1,67 @@
+@import "../../../scss/base/base.scss";
+
+.myMessageField {
+	@include flex(flex-end);
+	padding: base-gutter(0.5) base-gutter(2) base-gutter(0.5) 0;
+}
+
+.messageField {
+	@include flex(flex-start);
+	padding: base-gutter(0.5) 0 base-gutter(1) base-gutter(0.5);
+}
+
+.myMessage,
+.message {
+	max-width: 240px;
+	font-size: 16px;
+	margin: 0;
+	padding: base-gutter(3) base-gutter(6);
+	// min-height: 42px;
+	word-wrap: break-word;
+	border-radius: 25px;
+}
+
+.myMessage {
+	background: $blue-violet-gradient;
+	color: white;
+	border-bottom-right-radius: 5px;
+}
+
+.message {
+	background: $bg-ui-color;
+	color: $muted-color;
+	border-bottom-left-radius: 5px;
+}
+
+.dateMsg,
+.myDateMsg {
+	color: $muted-color;
+	font-size: 12px;
+	margin: 0;
+	bottom: 0;
+}
+
+.dateMsg {
+	order: 2;
+	margin-left: base-gutter(1);
+}
+.myDateMsg {
+	margin-right: base-gutter(1);
+}
+
+@include resp-md {
+	.myMessage,
+	.message {
+		max-width: 350px;
+		font-size: 18px;
+	}
+
+	.dateMsg {
+		font-size: 14px;
+		margin-left: base-gutter(2);
+	}
+	.myDateMsg {
+		font-size: 14px;
+		margin-right: base-gutter(2);
+	}
+}

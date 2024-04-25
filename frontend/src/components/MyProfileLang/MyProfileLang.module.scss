@@ -1,0 +1,12 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/functions";
+@import "../../scss/base/mixins";
+
+.wrapper{
+	border-radius: 15px;
+	background-color: #cbefff;
+	padding: 5px 14px 6px;
+	margin-right: 5px;
+	margin-bottom: 5px;	  
+	color: #14acef;
+}

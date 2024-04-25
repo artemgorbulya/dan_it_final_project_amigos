@@ -1,0 +1,15 @@
+@import "../../../scss/base/base.scss";
+
+.wrapper {
+  margin-bottom: base-gutter(4);
+}
+
+.selectMulti__label{
+  font-size: 11px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.title {
+  @include formFieldTitle();
+}

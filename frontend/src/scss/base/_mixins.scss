@@ -1,0 +1,63 @@
+@import "./variables";
+
+/*#region Media Queries*/
+
+// Needed?
+@mixin resp-xs {
+  @media screen and (max-width: 535px) {
+    @content;
+  }
+}
+
+@mixin resp-sm {
+  @media screen and (min-width: 536px) {
+    @content;
+  }
+}
+
+@mixin resp-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin resp-lg {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin resp-xl {
+  @media screen and (min-width: 1160px) {
+    @content;
+  }
+}
+
+/*#endregion Media Queries*/
+
+// SHADOW
+@mixin shadow {
+  box-shadow: 0 2px 6px rgba($color: black, $alpha: 0.16);
+}
+
+// FLEX 
+@mixin flex($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// FORM FIELD TITLE
+@mixin formFieldTitle {
+  color: $grey-color;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+// RESET BUTTON
+@mixin resetBtn() {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}

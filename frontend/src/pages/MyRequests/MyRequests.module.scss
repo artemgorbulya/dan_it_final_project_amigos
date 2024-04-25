@@ -1,0 +1,17 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/mixins";
+@import "../../scss/base/functions";
+@import "../../scss/base/common";
+
+.no-respose-title{
+  width: 100%;
+  color: #686868;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@include resp-md{
+  .no-respose-title{
+    padding: 15px;
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/functions";
+@import "../../scss/base/mixins";
+
+.modal-event-photo{
+  width: 100%;
+  height: 318px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title{
+  font-size: 18px;
+  font-weight: 500;
+  color: $black-color;
+  line-height: 1.39;
+  padding: 15px;
+}
+
+.no-respose-title{
+  width: 100%;
+  color: #686868;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@include resp-md{
+  .no-respose-title{
+    padding: 15px;
+  }
+}

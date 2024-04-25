@@ -1,0 +1,132 @@
+@import "../../scss/base/base";
+
+.sliderContainer {
+  margin-bottom: 16px;
+  position: relative;
+
+  @include resp-lg {
+    max-width: 707px;
+  }
+
+  @include resp-xl {
+    max-width: 807px;
+  }
+}
+
+.slideWrap {
+  @include flex();
+  height: 323px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: $default-radius $default-radius 0 0 ;
+  z-index: 0;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(9px) brightness(60%);
+    border-radius: inherit;
+  }
+
+  @include resp-sm {
+    height: 348px;
+  }
+
+  @include resp-md {
+    border-radius: 0;
+  }
+}
+
+.slideImage {
+  padding-left: 20px;
+  padding-bottom: 42px;
+  @include flex(flex-start, flex-end);
+  position: relative;
+  width: 343px;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: inherit;
+  z-index: 2;
+
+  &:hover {
+    .iconsWrap {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @include resp-sm {
+    width: 367px;
+  }
+
+  @media (min-width: 376px) {
+    border-radius: 0;
+  }
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.info {
+  .name{
+    font-size: 34px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .location {
+    font-size: 14px;
+    line-height: 1.43;
+    color: #ffffff;
+    opacity: 0.75;
+  }
+
+  .icon{
+    margin-right: 8px;
+    font-size: 14px;
+    color: $cyan-color;
+  }
+}
+
+.iconsWrap {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.iconBox{
+  width: 56px;
+  height: 56px;
+  @include flex();
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  &:first-of-type {
+    margin-bottom: 5px;
+    background: $orange-gradient;
+
+    i {
+      color: #ffffff;
+    }
+  }
+
+  i {
+    font-size: 25px;
+  }
+}
+

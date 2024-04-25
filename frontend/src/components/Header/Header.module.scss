@@ -1,0 +1,192 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/mixins";
+@import "../../scss/base/functions";
+
+.header{
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  top:0;
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+
+  &--hidden{
+    display: none;
+  }
+
+
+  &__content {
+    min-width: 320px;
+    max-width: 343px;
+    margin: 0 auto;
+    padding: base-gutter(9) 0;
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+  }
+
+  &__icon {
+    color: $orange-color;
+    margin-right: base-gutter(3);
+    margin-bottom: base-gutter(1);
+  }
+
+  &__pannel {
+    width: 100%;
+    min-height: 75vh;
+    position: relative;
+
+  }
+
+  &__nav {
+    text-transform: uppercase;
+
+    & li {
+      list-style-type: none;
+      margin-left: - base-gutter(10);
+      margin-top: base-gutter(8);
+      font-size: 20px;
+      &:first-child{
+        margin-top:  base-gutter(5.5);
+      }
+    }
+  }
+
+}
+
+.close-header{
+  color: white;
+  font-size: 14px;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 8px 10px;
+    &__wrapper{
+      width: 100%;
+      text-align: center;
+    }
+}
+
+.logo__link {
+  cursor: pointer;
+  margin-top: base-gutter(8);
+
+}
+
+.navlink {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: $orange-color;
+  }
+  &__selected {
+    color: $orange-color;
+  }
+
+}
+
+.btn__wrapper{
+  width: 100%;
+  @include flex();
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  & a {
+    text-decoration: none;
+  }
+
+}
+
+//adaptive
+
+@include resp-sm{
+  .header__nav {
+    & li {
+      margin-top: base-gutter(9.5);
+      font-size: 30px;
+      &:first-child{
+        margin-top: base-gutter(9.5);
+      }
+    }
+  }
+
+  .logo__link {
+     & img {
+       width: 253px;
+       height: 65px;
+     }
+
+  }
+}
+
+
+@include resp-md {
+  .close-header{
+    &__wrapper{
+      display: none;
+    }
+  }
+
+  .logo__link {
+    margin-top: 0;
+      & img {
+        width: 150px;
+        height: 38px;
+      }
+  }
+
+  .header {
+    @include shadow();
+    background: white;
+    margin-bottom: base-gutter(10);
+    position: static;
+    height: 72px;
+    overflow-y: auto;
+
+
+    &--hidden{
+      display: block;
+    }
+
+    &__content {
+      min-width: 100%;
+      max-width: 100%;
+      padding: base-gutter(4.25) 0;
+      flex-direction: row;
+      @include flex(space-between);
+      height: 72px;
+    }
+
+    &__pannel {
+      width: 580px;
+      min-height: 72px;
+      max-height: 72px;
+      @include flex(flex-end);
+    }
+
+    &__nav {
+      width: 380px;
+      @include flex(space-between);
+
+      & li {
+        margin: 0;
+        font-size: 14px;
+        &:first-child{
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .navlink {
+    color: $black-color;
+  }
+
+  .btn__wrapper{
+    width: 126px;
+    margin-top: 0;
+    position: static;
+    margin-left: 30px;
+  }
+}

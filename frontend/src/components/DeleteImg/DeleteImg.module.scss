@@ -1,0 +1,18 @@
+@import "../../scss/base/base.scss";
+
+.closeImg{
+  width: 20px;
+  height: 20px;
+  border: solid 2px white;
+  border-radius: 50%;
+  color: white;
+  background-color: $light-grey;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 2;
+  text-align: center;
+  padding:1px;
+  line-height: 14px;
+  cursor: pointer;
+}

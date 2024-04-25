@@ -1,0 +1,73 @@
+@import '../../scss/base/base';
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding: base-gutter(5) 0 base-gutter(3);
+  background-color: $black-color;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $orange-color;
+    opacity: 0.3;
+  }
+
+  .footerWrap {
+    height: 160px;
+    @include flex(space-between);
+    flex-direction: column;
+
+    & > div:first-child {
+      @include flex();
+      flex-direction: column;
+    }
+  }
+
+  .logo {
+    width: 110px;
+    margin-bottom: 15px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .footerLink {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 24px;
+  }
+
+  .copyright {
+    font-size: 12px;
+    color: #ffffff;
+  }
+}
+
+@include resp-md {
+  .footer {
+    .footerWrap {
+      height: auto;
+      flex-direction: row;
+      justify-content: space-between;
+
+      & > div:first-child {
+        width: 415px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: unset;
+      }
+    }
+
+    .logo {
+      margin-bottom: 0;
+      width: 90px;
+    }
+  }
+}

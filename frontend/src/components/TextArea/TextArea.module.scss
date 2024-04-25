@@ -1,0 +1,30 @@
+@import "../../scss/base/base.scss";
+
+.textArea{
+  width: 100%;
+  line-height: 20px;
+  background-color: #F8F9FA;
+  border: 2px solid #F8F9FA;
+  border-radius: 6px;
+  outline:none;
+  margin: 10px 0;
+  padding: 0 10px;
+  resize: none;
+}
+.textArea:focus{
+  outline:none;
+  //@include shadow();
+}
+
+.textArea__label{
+  font-size: 11px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.box{
+  position: relative;
+  width: 100%;
+}

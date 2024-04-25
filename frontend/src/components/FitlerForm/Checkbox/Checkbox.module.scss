@@ -1,0 +1,47 @@
+@import "../../../scss/base/mixins";
+@import "../../../scss/base/variables";
+
+.label {
+	@include flex(flex-start);
+	margin: 5px 0;
+	cursor: pointer;
+}
+
+.checkboxInput,
+.checkboxInputActive {
+	opacity: 0;
+	display: block;
+	height: 0;
+}
+
+.checkboxInputActive ~ .checkboxText::after {
+	opacity: 1;
+}
+
+.checkboxText {
+	position: relative;
+	margin-left: 25px;
+}
+
+.checkboxText::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	background: $bg-ui-color;
+	border-radius: 3px;
+}
+
+.checkboxText::after {
+	content: url("./checkbox-tick.svg");
+	display: block;
+	opacity: 0;
+	position: absolute;
+	top: 1px;
+	left: -23px;
+	width: 14px;
+	height: 14px;
+	z-index: 1000;
+	border-radius: 3px;
+}

@@ -1,0 +1,35 @@
+@import "../../scss/base/base.scss";
+.imgBox{
+  width: 142px;
+  height: 145px;
+  overflow: hidden;
+  display: flex;
+  padding: 1px;
+  position: relative;
+  cursor: pointer;
+}
+
+.img{
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Вписываем фотографию в область */
+  margin: 0 auto;
+}
+
+.twoButton{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px 0;
+
+  & button {
+    margin: 5px 0;
+    width: 100%;
+  }
+}
+.inputEl{
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}

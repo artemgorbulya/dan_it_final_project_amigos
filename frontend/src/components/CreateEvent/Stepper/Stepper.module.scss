@@ -1,0 +1,177 @@
+@import '../../../scss/base/base';
+
+.steps {
+  margin-top: base-gutter(19);
+  padding: base-gutter(7.5) base-gutter(3);
+  @include flex(center, flex-start);
+
+  .eventStep {
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    padding: 0 5px;
+
+    .line {
+      top: 12px;
+      left: calc(-50% + 16px);
+      right: calc(50% + 16px);
+      position: absolute;
+      flex: 1 1 auto;
+
+      span {
+        border-top: 1px solid #dadada;
+        display: block;
+      }
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      i {
+        font-size: 24px;
+        color: #a2a2a2;
+        line-height: 24px;
+        transition: all 0.15s linear;
+      }
+    }
+
+    .text {
+      width: 100%;
+      text-align: center;
+
+      span {
+        margin-top: 6px;
+        font-size: 10px;
+        color: #a2a2a2;
+      }
+    }
+
+    &--active {
+      .content {
+        i {
+          color: $orange-color;
+          border-color: $orange-color;
+        }
+
+        .text > span {
+          color: $black-color;
+        }
+      }
+    }
+  }
+}
+
+@include resp-sm {
+  .steps {
+    .eventStep {
+      .line {
+        top: 15px;
+        left: calc(-50% + 20px);
+        right: calc(50% + 20px);
+      }
+
+      .content {
+        i {
+          font-size: 30px;
+          line-height: 30px;
+        }
+
+        .text > span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@include resp-md {
+  .steps {
+    margin: 0 auto;
+    padding: base-gutter(7.5);
+
+    .eventStep {
+      .line {
+        left: calc(-50% + 25px);
+        right: calc(50% + 86px);
+
+        &--spec {
+          left: calc(-50% + 40px);
+        }
+      }
+
+      .content {
+        flex-direction: row;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+
+      .text {
+        width: auto;
+      }
+    }
+  }
+}
+
+@include resp-md {
+  .steps {
+    margin-left: 35px;
+    padding: base-gutter(7.5);
+
+    .eventStep {
+      .line {
+        left: calc(-50% + 28px);
+        right: calc(50% + 81px);
+
+        &--spec {
+          left: calc(-50% + 45px);
+        }
+      }
+
+      .content {
+        flex-direction: row;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+
+      .text {
+        width: auto;
+      }
+    }
+  }
+}
+
+@include resp-lg {
+  .steps {
+    .eventStep {
+      .line {
+        left: calc(-50% + 33px);
+
+        &--spec {
+          left: calc(-50% + 49px);
+        }
+      }
+    }
+  }
+}
+
+@include resp-xl {
+  .steps {
+    .eventStep {
+      .line {
+        left: calc(-50% + 20px);
+        right: calc(50% + 91px);
+
+        &--spec {
+          left: calc(-50% + 35px);
+        }
+      }
+    }
+  }
+}

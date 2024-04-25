@@ -1,0 +1,56 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/mixins";
+@import "../../scss/base/functions";
+
+.link__wrapper{
+  display: flex;
+  text-transform: uppercase;
+  top: 66px;
+  left: 0;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  @include shadow();
+  z-index: 500;
+
+}
+
+.response {
+  &__link {
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: $black-color;
+    padding: base-gutter(3.75);
+    border-bottom: 1px solid $light-grey;
+
+    &--active {
+      color: $orange-color;
+      border-bottom: 3px solid $orange-color;
+    }
+
+  }
+
+  &__wrapper {
+    width: 100%;
+    margin-top: 126px;
+    padding: base-gutter(5.5) base-gutter(8.5);
+  }
+}
+
+@include resp-md{
+  .link__wrapper{
+    position: static;
+    box-shadow: none;
+
+  }
+
+  .response {
+    &__wrapper {
+      margin-top: 0;
+    }
+  }
+
+}
+

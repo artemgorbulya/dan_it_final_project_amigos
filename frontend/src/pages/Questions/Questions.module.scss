@@ -1,0 +1,25 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/mixins";
+@import "../../scss/base/functions";
+@import "../../scss/base/common";
+
+.wrapper{
+	border-radius: $default-radius;
+	background: white;
+	@include shadow();
+    margin-bottom: base-gutter(24.5);
+    margin-top: 80px;
+    padding: 10px;
+	@include resp-sm {
+		margin-top: 80px;
+	}
+	@include resp-md {
+		margin-top: 0px;
+	}
+	@include resp-lg {
+		margin-top: 0px;
+	}
+	@include resp-xl {
+		margin-top: 0px;
+	}
+}

@@ -1,0 +1,19 @@
+@import "../../scss/base/base.scss";
+.imgBox{
+  width: 142px;
+  height: 145px;
+  overflow: hidden;
+  display: flex;
+  padding: 1px;
+  position: relative;
+}
+
+.img{
+  padding: 0;
+  cursor: pointer;
+  width: 100%; /* Ширина изображений */
+  height: 100%; /* Высота изображении */
+  object-fit: cover; /* Вписываем фотографию в область */
+  margin: 0 auto;
+
+}

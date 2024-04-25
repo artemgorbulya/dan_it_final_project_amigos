@@ -1,0 +1,29 @@
+@import "../../scss/base/base.scss";
+
+.formError{
+    //background-color: transparent;
+    background-color: white;
+    border-radius: 16px;
+    margin: 2px 4px;
+    position: absolute;
+    //left: -20 px;
+    right: 5px;
+    top: 15px;
+    display: flex;
+    border: 0.5px solid $orange-color;
+    padding: 1px 1px 1px 0;
+    z-index: 0;
+    @include shadow();
+    //padding: 1px;
+}
+.errorSvg{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    //border: 1px solid $orange-color;
+    border-radius: 50%;
+    fill: $orange-color;
+    padding: 1px;
+    //margin-right: 5px;
+    margin: 2px;
+}

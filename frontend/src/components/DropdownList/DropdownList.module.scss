@@ -1,0 +1,56 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/mixins";
+@import "../../scss/base/functions";
+
+.list {
+  @include flex(center, flex-start);
+  flex-direction: column;
+  border-radius: $default-radius;
+  background-color: $cyan-color;
+  padding: base-gutter(4);
+  position: relative;
+  min-width: 171px;
+
+  svg{
+    margin-right: 10px;
+  }
+
+  & li{
+    width: 100%;
+    list-style-type: none;
+    color: white;
+    margin-top: base-gutter(4);
+    cursor: pointer;
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+}
+
+.aside_button,
+.aside_button_stickedTop, .aside_button--profile {
+  position: absolute;
+  top: base-gutter(3);
+  right: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.aside_button {
+  color: $grey-color;
+}
+
+.aside_button--profile {
+  color: white;
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+}
+
+.aside_button_stickedTop {
+  top: 0;
+}
+
+.icon--dots-menu--active{
+  color: $cyan-color;
+}

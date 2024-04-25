@@ -1,0 +1,20 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/mixins";
+@import "../../scss/base/functions";
+@import "../../scss/base/common";
+
+.wrapper{
+	margin-top: 80px;
+	@include resp-sm {
+		margin-top: 80px;
+	}
+	@include resp-md {
+		margin-top: 0px;
+	}
+	@include resp-lg {
+		margin-top: 0px;
+	}
+	@include resp-xl {
+		margin-top: 0px;
+	}
+}

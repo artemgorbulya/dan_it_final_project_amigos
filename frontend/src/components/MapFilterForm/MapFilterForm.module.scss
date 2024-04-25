@@ -1,0 +1,14 @@
+@import '../../scss/base/base';
+
+.search {
+  position: absolute;
+  top: base-gutter(2);
+  left: 0;
+  width: 100%;
+  max-width: 130px;
+  z-index: 10;
+
+  input {
+    padding: base-gutter(2);
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../scss/base/base.scss";
+
+.registerPage{
+  background-attachment: fixed;
+  background-image:  linear-gradient(#ccc,#ccc), url(./img/background.png);
+  background-blend-mode: screen;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 1px;
+
+}
+.text{
+  font-size: 12px;
+  //font-weight: bold;
+  max-width: 530px;
+  margin: 10px auto;
+  text-align: justify;
+  padding: 12px;
+
+  & a{
+    cursor: pointer;
+  }
+}

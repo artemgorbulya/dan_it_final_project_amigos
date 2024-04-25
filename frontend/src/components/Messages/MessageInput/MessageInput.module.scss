@@ -1,0 +1,12 @@
+@import "../../../scss/base/base.scss";
+
+.input {
+	@include shadow();
+	background: $bg-ui-color !important;
+	border-radius: 0 !important;
+	font-size: 16px;
+
+	&:focus {
+		box-shadow: none !important;
+	}
+}

@@ -1,0 +1,35 @@
+@import "../../scss/base/base.scss";
+
+.dataSelect{
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  border: 2px solid #F8F9FA;
+  background-color: #F8F9FA;
+  margin: 10px 0;
+  position: relative;
+  width: 100%;
+}
+
+.dataSelect__label{
+  font-size: 11px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.box{
+  position: relative;
+  width: 100%;
+}
+
+.widthEl{
+  width: 100%;
+}
+@include resp-sm{
+  .dataSelect{
+    flex-direction: row;
+  }
+  .widthEl{
+    width: 33.3%;
+  }
+}

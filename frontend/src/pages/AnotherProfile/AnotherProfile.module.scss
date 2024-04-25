@@ -1,0 +1,34 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/mixins";
+@import "../../scss/base/functions";
+@import "../../scss/base/common";
+
+.wrapper{
+  margin-top: 80px;
+  @include resp-sm {
+    margin-top: 80px;
+  }
+  @include resp-md {
+    margin-top: 0;
+  }
+  @include resp-lg {
+    margin-top: 0;
+  }
+  @include resp-xl {
+    margin-top: 0;
+  }
+}
+
+.no-events-title {
+  font-size: 14px;
+  color: #686868;
+  text-transform: uppercase;
+  padding: 15px;
+  @include resp-sm {
+    padding: 15px 20px;
+  }
+  @include resp-md {
+    padding: 30px 20px;
+  }
+}
+

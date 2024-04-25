@@ -1,0 +1,30 @@
+@import "../../../scss/base/base.scss";
+
+.wrapper {
+	position: relative;
+	min-height: 70px;
+	width: 100%;
+}
+
+.input {
+	text-indent: 28px;
+	font-size: 14px;
+}
+
+.text {
+	color: $grey-color;
+	position: absolute;
+	left: base-gutter(4);
+	top: base-gutter(3.5);
+}
+
+.errorMessage {
+	color: $error-color;
+	font-size: 13px;
+}
+
+@include resp-sm {
+	.text {
+		top: base-gutter(4.05);
+	}
+}

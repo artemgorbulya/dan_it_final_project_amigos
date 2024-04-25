@@ -1,0 +1,51 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/mixins";
+@import "../../scss/base/functions";
+@import "../../scss/base/common";
+
+.wrapper{
+	margin-top: 80px;
+	@include resp-sm {
+		margin-top: 80px;
+	}
+	@include resp-md {
+		margin-top: 0;
+	}
+	@include resp-lg {
+		margin-top: 0;
+	}
+	@include resp-xl {
+		margin-top: 0;
+	}
+}
+
+.createEvent{
+	text-transform: uppercase;
+	font-weight: 500;
+	@include flex();
+	font-size: .928rem;
+	line-height: 1;
+	outline: none;
+	cursor: pointer;
+	border-radius: 4px;
+	border: none;
+	text-decoration: none;
+	padding: 5px 34px;
+	min-height: 46px;
+	color: #5A6F78;
+	background: #F3F5F5;
+    margin: 20px auto;
+	width: 90%;
+	@include resp-sm {
+		width: 50%;
+		min-height: 52px;
+	}
+
+	& svg {
+		width: 18px;
+		height: 18px;
+		fill: $orange-color;
+		margin-right: base-gutter(2);
+	}
+}
+

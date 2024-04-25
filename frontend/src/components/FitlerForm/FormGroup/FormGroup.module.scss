@@ -1,0 +1,53 @@
+@import "../../../scss/base/variables";
+@import "../../../scss/base/mixins";
+@import "../../../scss/base/functions";
+
+.formGroup {
+	margin-bottom: base-gutter(5);
+}
+
+.orangeSquare {
+	@include flex();
+	border: 1px solid $orange-color;
+	border-radius: 3px;
+	position: relative;
+	width: 34px;
+	height: 34px;
+	cursor: pointer;
+}
+
+.arrow {
+	transition: 0.1s;
+}
+
+.arrowReversed {
+	transform: rotate(180deg)
+}
+
+.separator {
+	height: 2px;
+	// background: $light-grey;
+	background: repeating-linear-gradient(
+		90deg,
+		$light-grey,
+		$light-grey 2px,
+		white 2px,
+		white 4px
+	);
+	width: 100%;
+	margin-bottom: base-gutter(4);
+}
+
+.header {
+	@include flex(space-between);	
+}
+
+.body {
+	@include flex(flex-start);
+	flex-wrap: wrap;
+}
+
+.body > * {
+	margin-right: base-gutter(1);
+	margin-bottom: base-gutter(1);
+}

@@ -1,0 +1,12 @@
+{
+	"watch": [
+		"./src",
+		"./.env"
+	],
+	"ignore": [
+		"api/**/*.spec.ts",
+		"api/**/*.test.ts"
+	],
+	"exec": "npm run start:babel",
+	"ext": "js,ts,json"
+}

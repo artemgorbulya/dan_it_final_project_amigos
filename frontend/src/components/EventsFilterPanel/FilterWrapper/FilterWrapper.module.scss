@@ -1,0 +1,34 @@
+@import "../../../scss/base/base.scss";
+
+.wrapper {
+	@include flex(flex-start);
+	flex-wrap: wrap;
+	// max-width: 70%;
+	border-radius: 8px;
+	padding: base-gutter(1) base-gutter(2);
+	margin-bottom: base-gutter(1);
+	background: $muted-color;
+}
+
+.title {
+	color: white;
+	width: 100%;
+	margin: base-gutter(1) 0;
+	// margin-right: base-gutter(2);
+}
+
+.closeBtn {
+	color: white;
+	cursor: pointer;
+	margin: base-gutter(1) 0 base-gutter(1) base-gutter(2);
+}
+
+@include resp-md {
+	.wrapper {
+		@include flex(flex-start);
+	}
+	.title {
+		margin: 0 base-gutter(2) 0 0;
+		width: auto;
+	}
+}

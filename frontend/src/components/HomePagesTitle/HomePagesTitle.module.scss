@@ -1,0 +1,78 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/functions";
+@import "../../scss/base/mixins";
+
+.wrapper {
+	@include flex(space-between);
+	height: 66px;
+	padding: 0 base-gutter(5);
+	position: fixed;
+	z-index: 500;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: white;
+	border-bottom: 1px solid $light-grey;
+}
+
+.infoWrapper {
+	@include flex();
+}
+
+.titleText {
+	margin: 0;
+	margin-left: base-gutter(5);
+}
+
+// Burger menu on mobile
+.menuBlock {
+	height: 100%;
+	@include flex();
+}
+
+.separator {
+	width: 1px;
+	background: $light-grey;
+	height: 100%;
+}
+
+.burger {
+	i {
+		padding-left: base-gutter(5);
+		font-size: 22px;
+	}
+}
+
+.infoWrapperReversed {
+	.titleText {
+		margin-left: 0;
+	}	
+}
+
+@include resp-md {
+	.wrapper {
+		position: static;
+		border-top-left-radius: $default-radius;
+		border-top-right-radius: $default-radius;
+	}
+	.infoWrapper {
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		width: 100%;
+	}
+	.titleText {
+		margin-left: 0;
+	}
+	.menuBlock {
+		display: none;
+	}
+}
+
+
+@include resp-lg {
+	.wrapper {
+		border-top-left-radius: $default-radius * 2;
+		border-top-right-radius: $default-radius * 2;
+	}
+
+}

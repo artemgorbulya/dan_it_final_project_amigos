@@ -1,0 +1,8 @@
+@import "../../scss/base/variables";
+@import "../../scss/base/functions";
+@import "../../scss/base/mixins";
+
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
